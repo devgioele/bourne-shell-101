@@ -14,10 +14,18 @@ do
       break
     fi
   done
-  if [ "$PALINDROME" = true ]
-  then
-    echo "'$ARG' is a palindrome"
-  else
-    echo "'$ARG' is not a palindrome"
-  fi
+
+  # Using a verbose if-else statement
+  # if [ "$PALINDROME" = true ]
+  # then
+  #   echo "'$ARG' is a palindrome"
+  # else
+  #   echo "'$ARG' is not a palindrome"
+  # fi
+  
+  # Using string interpolation with an if statement
+  # echo "'$ARG' is$(if [ "$PALINDROME" = false ]; then; echo " not"; fi) a palindrome"
+  
+  # Using string interpolation with logical operators
+  echo "'$ARG' is$([ "$PALINDROME" = false ] && echo " not") a palindrome"
 done
