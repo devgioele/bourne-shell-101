@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 N=0
 while [ $N -lt 5 ]

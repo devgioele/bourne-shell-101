@@ -1,4 +1,4 @@
-# Take arguments
+#!/bin/sh
 
 # For each argument
 for ARG
@@ -8,7 +8,7 @@ do
   for (( i = 0; i < $(expr ${#ARG} / 2); i++ ))
   do
     # Compare character with its mirrored version for equality
-    if [ ${ARG[i]} != ${ARG[${#ARG}-1-i]} ]
+    if [ ${ARG[i]} != ${ARG[${#ARG} - 1 - i]} ]
     then
       PALINDROME=false
       break
@@ -23,9 +23,9 @@ do
   #   echo "'$ARG' is not a palindrome"
   # fi
   
-  # Using string interpolation with an if statement
+  # Using string interpolation and an if statement
   # echo "'$ARG' is$(if [ "$PALINDROME" = false ]; then; echo " not"; fi) a palindrome"
   
-  # Using string interpolation with logical operators
+  # Using string interpolation and a logical operators
   echo "'$ARG' is$([ "$PALINDROME" = false ] && echo " not") a palindrome"
 done
