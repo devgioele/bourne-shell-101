@@ -2,7 +2,7 @@
 
 The basics of the POSIX shell, including some common deviations like Bash.
 
-Make sure you use a shell that is strictly POSIX compliant,
+Make sure you use for `/bin/sh` a shell that is *strictly* POSIX compliant,
 like [Dash](http://gondor.apana.org.au/~herbert/dash/).
 
 A good reference for quick lookups:
