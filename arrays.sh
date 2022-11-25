@@ -1,6 +1,9 @@
 #!/bin/sh
 
 fruits="Apple Banana Peach Ananas"
+# Set the positional parameters (the passed arguments) to the expansion of `fruits`.
+# This means that the passed arguments are overwritten with the items contained
+# by `fruits`.
 set -- $fruits
 for FRUIT in "$@"
 do
