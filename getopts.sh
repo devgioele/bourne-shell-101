@@ -1,5 +1,8 @@
 #! /bin/sh -
-PROGNAME=$0
+
+# TODO: Fix correctness
+
+PROGNAME="${0##*/}"
 
 usage() {
   cat << EOF >&2
