@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # For each argument
 for ARG
@@ -8,7 +8,7 @@ do
   for (( i = 0; i < $(expr ${#ARG} / 2); i++ ))
   do
     # Compare character with its mirrored version for equality
-    if [ ${ARG[i]} != ${ARG[${#ARG} - 1 - i]} ]
+    if [ "${ARG:i:1}" != "${ARG:${#ARG} - 1 - i:1}" ]
     then
       PALINDROME=false
       break
